@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+}
+
+.meu-cabecalho {
+    padding: 20px 60px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
