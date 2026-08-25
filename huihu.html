@@ -1,40 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lara Eifert | Front-end Developer</title>
     <link rel="stylesheet" href="style.css">
-</head>
+  </head>
+  <body>
+ 	<header>
+  		<nav>
+    		<a href="#inicio">
+      			<img src="C:\Users\larae\OneDrive\Documentos\front\Logo-Test" alt="Lara Eifert">
+    		</a>
 
-<body>
+    		<div>
+      			<a href="#sobre">Lara</a>
+      			<a href="#projetos">Portfólio</a>
+      			<a href="#contato">Contato</a>
+    		</div>
+  		</nav>
+	</header>
 
-<header>
-   	<nav>
-		<a href="#inicio">	
-			<svg>
-			</svg>
-		</a>
-        	<a href="#sobre">Lara</a>
-        	<a href="#portfolio">Portfólio</a>
-        	<a href="#contato">Contato</a>
+    <main>
 
-    	</nav>
-</header>
+<!-- INICIO  -->
+     <section id="inicio">
+  		<h1>Front-end Developer ·
+			Designer</h1>
 
-<main> 
-<section id="inicio">
+		<!-- TEXTOS  -->
+  		<div>
+    		<p>Transformo problemas em soluções digitais.</p>
+    		<p>Entender. Questionar. Criar. Solucionar.</p>
+  		</div>
+	</section>
 
-	<h1> Front-end Developer · Designer </h1>
-	<h2> Transformo problemas em soluções digitais. </h2>
-	<h3>Entender. Questionar. Criar. Solucionar.</h3>
+	<!-- SOBRE LARA -->
 
-</section id="inicio">
+     <section id="sobre">
 
-<section id="sobre">
-	<h3> por trás da sua experiencia digital </h3>
-	<h1>Lara Eifert</h1>
-	<h2> Sou desenvolvedora Front-end com formação em Design, criando experiências digitais claras, funcionais e pensadas para pessoas. </h2>
-	<a href="#contato">Contato</a>
-</body>
+  		<div class="logos-clientes">
+    		<img src="imagens/LOGO%20CLIENTES.png" alt="Logos de clientes">
+ 		 </div>
+
+  		<div class="conteudo-sobre">
+
+  				<img src="imagens/foto%20profissional.jpg" alt="Lara Eifert">
+
+  				<div class="texto-sobre">
+    			<p>Por trás da sua experiência digital</p>
+
+    			<h2>Lara Eifert</h2>
+
+    			<p>Sou desenvolvedora Front-end com formação em Design, unindo pensamento criativo e tecnologia para criar experiências digitais claras, funcionais e intuitivas. Busco transformar problemas em soluções bem estruturadas, equilibrando estética, usabilidade e propósito em cada projeto.</p>
+
+    			<a href="#contato">Contato</a>
+  			</div>
+
+		</div>
+
+	</section>
+
+      <section id="projetos">
+        <h2>Projetos</h2>
+
+        <div class="portfolio-tabs" role="tablist" aria-label="Categorias de projetos">
+          <button type="button" id="tab-design" class="tab-categoria ativo" role="tab" aria-selected="true" aria-controls="painel-design" data-categoria="design">Design Gráfico</button>
+          <button type="button" id="tab-uxui" class="tab-categoria" role="tab" aria-selected="false" aria-controls="painel-uxui" data-categoria="uxui">UX/UI</button>
+          <button type="button" id="tab-frontend" class="tab-categoria" role="tab" aria-selected="false" aria-controls="painel-frontend" data-categoria="frontend">Front End</button>
+          <button type="button" id="tab-backend" class="tab-categoria" role="tab" aria-selected="false" aria-controls="painel-backend" data-categoria="backend">Back End</button>
+        </div>
+
+        <div class="portfolio-painel">
+          <article id="painel-design" class="projeto-categoria ativo" role="tabpanel" aria-labelledby="tab-design" data-categoria="design">
+            <ul>
+              <li>
+                <a href="branding.html">Branding</a>
+              </li>
+              <li>Social Media Design</li>
+            </ul>
+          </article>
+
+          <article id="painel-uxui" class="projeto-categoria" role="tabpanel" aria-labelledby="tab-uxui" data-categoria="uxui">
+            <ul>
+              <li>
+                <a href="sprinta.html">Sprinta</a>
+              </li>
+            </ul>
+          </article>
+
+          <article id="painel-frontend" class="projeto-categoria" role="tabpanel" aria-labelledby="tab-frontend" data-categoria="frontend">
+            <p>Em construção.</p>
+          </article>
+
+          <article id="painel-backend" class="projeto-categoria" role="tabpanel" aria-labelledby="tab-backend" data-categoria="backend">
+            <p>Em construção.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="numeros">
+        <h2 class="sr-only">Números e conquistas</h2>
+        <article>
+          <strong>+5</strong>
+          <h3>anos de experiência</h3>
+          <p>Projetando soluções para diferentes desafios.</p>
+        </article>
+        <article>
+          <strong>+20</strong>
+          <h3>clientes atendidos</h3>
+          <p>Experiências construídas para pessoas e negócios.</p>
+        </article>
+        <article>
+          <strong>+30</strong>
+          <h3>projetos desenvolvidos</h3>
+          <p>Do conceito à solução.</p>
+        </article>
+        <article>
+          <strong>2</strong>
+          <h3>áreas que se complementam</h3>
+          <p>Design e tecnologia em um mesmo olhar.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer id="contato">
+      <a href="mailto:contato@laraeifert.com" class="botao-contato">contato</a>
+      <p>© 2026 Lara Eifert</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
 </html>

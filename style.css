@@ -1,12 +1,734 @@
-body {
-    margin: 0;
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.meu-cabecalho {
-    padding: 20px 60px;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0d0b0b;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+:root {
+  --preto: #0d0b0b;
+  --preto-puro: #000000;
+  --branco: #ffffff;
+
+  --azul-claro: #c8edff;
+  --azul: #b7e5fa;
+
+  --verde-claro: #c5e67a;
+  --verde: #91ad00;
+
+  --cinza: #aaa9aa;
+
+  --raio: 14px;
+  --raio-grande: 24px;
+
+  --container: 1200px;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  z-index: 10;
+
+  padding: 24px 5%;
+  background: var(--preto-puro)
 }
 
 nav {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+
+
+nav div {
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+}
+
+section {
+  min-height: 100vh;
+  scroll-margin-top: 90px;
+}
+
+/* Primeiro link = LOGO */
+
+nav > a:first-child {
+  display: flex;
+  align-items: center;
+}
+
+/* Links Lara / Contato / Portfólio */
+
+nav div a {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+nav div a:hover {
+  opacity: 0.7;
+}
+
+
+/* =========================================================
+   HERO / INÍCIO
+========================================================= */
+
+#inicio {
+  min-height: 100vh;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 60px;
+
+  padding: 150px 8% 110px;
+
+  color: var(--branco);
+
+    background-image: url("imagens/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+
+}
+
+
+/* Título */
+
+#inicio h1 {
+  position: relative;
+  z-index: 2;
+
+  max-width: 30vw;
+
+  font-size: clamp(52px, 9vw, 90px);
+  line-height: 0.98;
+  font-weight: 800;
+  letter-spacing: -3px;
+}
+
+/* Textos do lado direito */
+
+#inicio p {
+  position: relative;
+  z-index: 2;
+
+  max-width: 30vw;
+
+  color: var(--branco);
+}
+
+#inicio p:first-of-type {
+  font-size: clamp(28px, 2.8vw, 36px);
+  font-weight: 800;
+  line-height: 1.05;
+
+  margin-bottom: 20px;
+}
+
+#inicio p:last-of-type {
+  font-size: clamp(18px, 2.2vw, 25px);
+  font-weight: 700;
+  line-height: 2;
+}
+
+
+/* =========================================================
+   SOBRE / LARA
+========================================================= */
+
+#sobre {
+  min-height: auto;
+  padding: 20px 8% 80px;
+  background: var(--preto);
+  padding-bottom: 150px;
+}
+
+/* LOGOS */
+
+.logos-clientes {
+  width: 120%;
+  margin-left: -10%;
+  margin-bottom: 60px;
+}
+
+.logos-clientes img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* FOTO + TEXTO */
+
+.conteudo-sobre {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.conteudo-sobre > img {
+  width: 180%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 14px;
+  transform: translateX(-230px);
+}
+
+.texto-sobre p:first-child {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+    transform: translateX(150px);
+}
+
+.texto-sobre h2 {
+  font-size: clamp(52px, 9vw, 90px);
+  line-height: 1;
+  margin-bottom: 25px;
+    transform: translateX(150px);
+}
+
+.texto-sobre p:nth-of-type(2) {
+  max-width: 520px;
+  font-size: 16px;
+  line-height: 1.55;
+  margin-bottom: 25px;
+    transform: translateX(150px);
+}
+
+.texto-sobre a {
+  display: inline-block;
+  width: 160px;
+  padding: 10px 20px;
+transform: translateX(150px);
+
+  background: var(--branco);
+  color: var(--preto);
+
+  border-radius: 7px;
+  text-align: center;
+  
+}
+
+/* =========================================================
+   PROJETOS / PORTFÓLIO
+========================================================= */
+
+#projetos {
+  max-width: 1100px;
+  margin: 60px auto 0;
+
+  padding: 0 40px 40px;
+}
+
+/* Título da seção */
+
+#projetos > h2 {
+  font-size: 16px;
+
+  margin-bottom: 20px;
+}
+
+/* Barra de categorias (abas) */
+
+.portfolio-tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.tab-categoria {
+  padding: 10px 18px;
+
+  border: none;
+  border-radius: 7px 7px 0 0;
+
+  background: var(--cinza);
+  color: var(--preto);
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.tab-categoria.ativo {
+  background: #b9f75d;
+}
+
+/* Painel preto com os cards da categoria ativa */
+
+.portfolio-painel {
+  background: var(--preto-puro);
+
+  border-radius: 0 8px 8px 8px;
+
+  padding: 25px;
+}
+
+/* Cada categoria fica oculta até virar a ativa */
+
+.projeto-categoria {
+  display: none;
+}
+
+.projeto-categoria.ativo {
+  display: block;
+}
+
+/* Lista de projetos da categoria ativa, lado a lado */
+
+.projeto-categoria ul {
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Cards de projeto */
+
+.projeto-categoria li {
+  flex: 1 1 200px;
+
+  min-height: 320px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  color: var(--branco);
+
+  font-size: 18px;
+  font-weight: 800;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse 50px 30px at 50% 25%,
+      white 0%,
+      white 70%,
+      transparent 71%
+    ),
+    linear-gradient(
+      to bottom,
+      #bdeaff 0%,
+      #eaf8ff 65%,
+      var(--verde-claro) 65%,
+      var(--verde-claro) 80%,
+      var(--verde) 80%
+    );
+}
+
+/* Texto do card */
+
+.projeto-categoria li a {
+  text-shadow:
+    2px 2px 0 var(--preto),
+    -1px -1px 0 var(--preto);
+
+  transition: transform 0.2s ease;
+}
+
+.projeto-categoria li a:hover {
+  transform: scale(1.05);
+}
+
+/* Front e Back End (ainda sem projetos) */
+
+.projeto-categoria p {
+  min-height: 320px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #aaa;
+
+  font-size: 14px;
+  text-align: center;
+}
+
+
+/* =========================================================
+   NÚMEROS
+========================================================= */
+
+#numeros {
+  max-width: 1100px;
+
+  margin: 100px auto 0;
+
+  padding: 50px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 50px;
+}
+
+#numeros article {
+  display: flex;
+  flex-direction: column;
+}
+
+#numeros strong {
+  display: block;
+
+  font-size: clamp(52px, 6vw, 82px);
+  line-height: 0.9;
+
+  font-weight: 800;
+
+  margin-bottom: 30px;
+}
+
+#numeros h3 {
+  font-size: 14px;
+
+  margin-bottom: 12px;
+}
+
+#numeros p {
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  color: #eeeeee;
+}
+
+
+/* =========================================================
+   FOOTER / CONTATO
+========================================================= */
+
+footer {
+  max-width: 1100px;
+
+  margin: 70px auto 0;
+
+  padding: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.botao-contato {
+  width: 55%;
+
+  padding: 14px 30px;
+
+  background: var(--branco);
+  color: var(--preto);
+
+  border-radius: 8px;
+
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.botao-contato:hover {
+  opacity: 0.85;
+}
+
+footer p {
+  width: 160px;
+
+  padding: 14px;
+
+  background: var(--preto-puro);
+
+  border-radius: 8px;
+
+  text-align: center;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   REMOVER OS <br> DO HTML
+========================================================= */
+
+body > br,
+main > br {
+  display: none;
+}
+
+
+/* =========================================================
+   TRANSIÇÕES
+========================================================= */
+
+a,
+article,
+#sobre a {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  #inicio {
+    min-height: 650px;
+
+    padding: 150px 7% 120px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  #inicio h1 {
+    max-width: 600px;
+  }
+
+  #inicio p:first-of-type {
+    max-width: 500px;
+  }
+
+  #sobre {
+    grid-template-columns: 220px 1fr;
+
+    column-gap: 40px;
+
+    padding: 40px;
+  }
+
+  #sobre::before {
+    height: 240px;
+  }
+
+  #numeros {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+  header {
+    padding: 18px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  nav a:first-child {
+    width: 90px;
+    height: 35px;
+  }
+
+  nav a:not(:first-child) {
+    font-size: 11px;
+  }
+
+
+  /* HERO */
+
+  #inicio {
+    min-height: 700px;
+
+    padding: 130px 25px 110px;
+
+    gap: 40px;
+  }
+
+  #inicio h1 {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+
+  #inicio p:first-of-type {
+    font-size: 24px;
+  }
+
+
+  /* LOGOS */
+
+  #logo_cliente {
+    padding: 30px 20px;
+  }
+
+  #logo_cliente > div {
+    padding: 20px;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+  }
+
+
+  /* SOBRE */
+
+  #sobre {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 40px 25px;
+
     gap: 20px;
+  }
+
+  #sobre::before {
+    width: 100%;
+    height: 260px;
+
+    order: 0;
+  }
+
+  #sobre > p:first-child {
+    order: 1;
+  }
+
+  #sobre h2 {
+    order: 2;
+
+    font-size: 48px;
+  }
+
+  #sobre > p:nth-of-type(2) {
+    order: 3;
+  }
+
+  #sobre a {
+    order: 4;
+  }
+
+
+  /* PROJETOS */
+
+  #projetos {
+    padding: 0 25px 30px;
+
+    margin-top: 30px;
+  }
+
+  .portfolio-tabs {
+    flex-wrap: wrap;
+  }
+
+  .projeto-categoria li,
+  .projeto-categoria p {
+    min-height: 250px;
+  }
+
+
+  /* NÚMEROS */
+
+  #numeros {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px 20px;
+
+    padding: 40px 25px;
+
+    margin-top: 50px;
+  }
+
+  #numeros strong {
+    font-size: 48px;
+
+    margin-bottom: 20px;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 40px 25px;
+
+    margin-top: 30px;
+  }
+
+  .botao-contato,
+  footer p {
+    width: 100%;
+  }
 }
