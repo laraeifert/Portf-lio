@@ -3,132 +3,333 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lara Eifert | Front-end Developer</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
- 	<header>
-  		<nav>
-    		<a href="#inicio">
-      			<img src="C:\Users\larae\OneDrive\Documentos\front\Logo-Test" alt="Lara Eifert">
-    		</a>
 
-    		<div>
-      			<a href="#sobre">Lara</a>
-      			<a href="#projetos">Portfólio</a>
-      			<a href="#contato">Contato</a>
-    		</div>
-  		</nav>
-	</header>
+    <title>Lara Eifert | Front-end Developer</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+
+    <!-- CABEÇALHO FIXO -->
+    <header>
+
+      <!-- LOGO - BOTÃO INICIAL -->
+      <nav>
+        <a href="#inicio">
+          <img src="C:\Users\larae\OneDrive\Documentos\front\Logo-Test" alt="Lara Eifert">
+        </a>
+
+        <!-- BOTÕES DE NAVEGAÇÃO -->
+        <div>
+          <a href="#sobre">Lara</a>
+          <a href="#projetos">Portfólio</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </nav>
+
+    </header>
+
 
     <main>
 
-<!-- INICIO  -->
-     <section id="inicio">
-  		<h1>Front-end Developer ·
-			Designer</h1>
+      <!-- =====================================================
+           INÍCIO / HERO
+      ====================================================== -->
 
-		<!-- TEXTOS  -->
-  		<div>
-    		<p>Transformo problemas em soluções digitais.</p>
-    		<p>Entender. Questionar. Criar. Solucionar.</p>
-  		</div>
-	</section>
+      <section id="inicio">
 
-	<!-- SOBRE LARA -->
+        <h1>Front-end Developer · Designer</h1>
 
-     <section id="sobre">
+        <div>
+          <p>Transformo problemas em soluções digitais.</p>
+          <p>Entender. Questionar. Criar. Solucionar.</p>
+        </div>
 
-  		<div class="logos-clientes">
-    		<img src="imagens/LOGO%20CLIENTES.png" alt="Logos de clientes">
- 		 </div>
+      </section>
 
-  		<div class="conteudo-sobre">
 
-  				<img src="imagens/foto%20profissional.jpg" alt="Lara Eifert">
+      <!-- =====================================================
+           SOBRE LARA
+      ====================================================== -->
 
-  				<div class="texto-sobre">
-    			<p>Por trás da sua experiência digital</p>
+      <section id="sobre">
 
-    			<h2>Lara Eifert</h2>
+        <!-- LOGOS CLIENTES -->
+        <div class="logos-clientes">
+          <img
+            src="imagens/LOGO%20CLIENTES.png"
+            alt="Logos de clientes">
+        </div>
 
-    			<p>Sou desenvolvedora Front-end com formação em Design, unindo pensamento criativo e tecnologia para criar experiências digitais claras, funcionais e intuitivas. Busco transformar problemas em soluções bem estruturadas, equilibrando estética, usabilidade e propósito em cada projeto.</p>
+        <!-- FOTO + TEXTO -->
+        <div class="conteudo-sobre">
 
-    			<a href="#contato">Contato</a>
-  			</div>
+          <!-- FOTO PROFISSIONAL -->
+          <img
+            src="imagens/foto%20profissional.jpg"
+            alt="Lara Eifert">
 
-		</div>
+          <div class="texto-sobre">
 
-	</section>
+            <p>Por trás da sua experiência digital</p>
+
+            <h2>Lara Eifert</h2>
+
+            <p>
+              Sou desenvolvedora Front-end com formação em Design,
+              unindo pensamento criativo e tecnologia para criar
+              experiências digitais claras, funcionais e intuitivas.
+              Busco transformar problemas em soluções bem estruturadas,
+              equilibrando estética, usabilidade e propósito em cada projeto.
+            </p>
+
+            <a href="#contato">Contato</a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           PROJETOS / PORTFÓLIO
+      ====================================================== -->
 
       <section id="projetos">
+
         <h2>Projetos</h2>
 
-        <div class="portfolio-tabs" role="tablist" aria-label="Categorias de projetos">
-          <button type="button" id="tab-design" class="tab-categoria ativo" role="tab" aria-selected="true" aria-controls="painel-design" data-categoria="design">Design Gráfico</button>
-          <button type="button" id="tab-uxui" class="tab-categoria" role="tab" aria-selected="false" aria-controls="painel-uxui" data-categoria="uxui">UX/UI</button>
-          <button type="button" id="tab-frontend" class="tab-categoria" role="tab" aria-selected="false" aria-controls="painel-frontend" data-categoria="frontend">Front End</button>
-          <button type="button" id="tab-backend" class="tab-categoria" role="tab" aria-selected="false" aria-controls="painel-backend" data-categoria="backend">Back End</button>
+        <!-- TÍTULOS PARA PORTFÓLIO -->
+        <div
+          class="portfolio-tabs"
+          role="tablist"
+          aria-label="Categorias de projetos">
+
+          <button
+            type="button"
+            id="tab-design"
+            class="tab-categoria ativo"
+            role="tab"
+            aria-selected="true"
+            aria-controls="painel-design"
+            data-categoria="design">
+            Design Gráfico
+          </button>
+
+          <button
+            type="button"
+            id="tab-uxui"
+            class="tab-categoria"
+            role="tab"
+            aria-selected="false"
+            aria-controls="painel-uxui"
+            data-categoria="uxui">
+            UX/UI
+          </button>
+
+          <button
+            type="button"
+            id="tab-frontend"
+            class="tab-categoria"
+            role="tab"
+            aria-selected="false"
+            aria-controls="painel-frontend"
+            data-categoria="frontend">
+            Front End
+          </button>
+
+          <button
+            type="button"
+            id="tab-backend"
+            class="tab-categoria"
+            role="tab"
+            aria-selected="false"
+            aria-controls="painel-backend"
+            data-categoria="backend">
+            Back End
+          </button>
+
         </div>
+
 
         <div class="portfolio-painel">
-          <article id="painel-design" class="projeto-categoria ativo" role="tabpanel" aria-labelledby="tab-design" data-categoria="design">
-            <ul>
-              <li>
-                <a href="branding.html">Branding</a>
-              </li>
-              <li>Social Media Design</li>
-            </ul>
+
+          <!-- DESIGN GRÁFICO -->
+
+          <article
+            id="painel-design"
+            class="projeto-categoria ativo"
+            role="tabpanel"
+            aria-labelledby="tab-design"
+            data-categoria="design">
+
+            <div class="projetos-grid">
+
+              <a
+                href="LINK-DO-PROJETO-BRANDING"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-projeto">
+
+                <img
+                  src="imagens/branding.png"
+                  alt="Projeto de Branding">
+
+                <h3>Branding</h3>
+
+                <p>
+                  Identidade visual e construção de marca.
+                </p>
+
+              </a>
+
+
+              <a
+                href="LINK-DO-PROJETO-SOCIAL-MEDIA"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-projeto">
+
+                <img
+                  src="imagens/socialmediaa.png"
+                  alt="Projeto de Social Media Design">
+
+                <h3>Social Media Design</h3>
+
+                <p>
+                  Projetos gráficos para comunicação digital.
+                </p>
+
+              </a>
+
+            </div>
+
           </article>
 
-          <article id="painel-uxui" class="projeto-categoria" role="tabpanel" aria-labelledby="tab-uxui" data-categoria="uxui">
-            <ul>
-              <li>
-                <a href="sprinta.html">Sprinta</a>
-              </li>
-            </ul>
+
+          <!-- UX/UI -->
+
+          <article
+            id="painel-uxui"
+            class="projeto-categoria"
+            role="tabpanel"
+            aria-labelledby="tab-uxui"
+            data-categoria="uxui">
+
+            <div class="projetos-grid">
+
+              <a
+                href="https://sprinta.figma.site/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-projeto">
+
+                <img
+                  src="imagens/sprinta.jpg"
+                  alt="Projeto Sprinta de UX/UI">
+
+                <h3>Sprinta</h3>
+
+                <p>
+                  Projeto de UX/UI e desenvolvimento de uma experiência digital.
+                </p>
+
+              </a>
+
+            </div>
+
           </article>
 
-          <article id="painel-frontend" class="projeto-categoria" role="tabpanel" aria-labelledby="tab-frontend" data-categoria="frontend">
+
+          <!-- FRONT END -->
+
+          <article
+            id="painel-frontend"
+            class="projeto-categoria"
+            role="tabpanel"
+            aria-labelledby="tab-frontend"
+            data-categoria="frontend">
+
             <p>Em construção.</p>
+
           </article>
 
-          <article id="painel-backend" class="projeto-categoria" role="tabpanel" aria-labelledby="tab-backend" data-categoria="backend">
+
+          <!-- BACK END -->
+
+          <article
+            id="painel-backend"
+            class="projeto-categoria"
+            role="tabpanel"
+            aria-labelledby="tab-backend"
+            data-categoria="backend">
+
             <p>Em construção.</p>
+
           </article>
+
         </div>
+
       </section>
+
+
+      <!-- =====================================================
+           SECTION 4 — NÚMEROS + CONTATO
+      ====================================================== -->
 
       <section id="numeros">
-        <h2 class="sr-only">Números e conquistas</h2>
-        <article>
-          <strong>+5</strong>
-          <h3>anos de experiência</h3>
-          <p>Projetando soluções para diferentes desafios.</p>
-        </article>
-        <article>
-          <strong>+20</strong>
-          <h3>clientes atendidos</h3>
-          <p>Experiências construídas para pessoas e negócios.</p>
-        </article>
-        <article>
-          <strong>+30</strong>
-          <h3>projetos desenvolvidos</h3>
-          <p>Do conceito à solução.</p>
-        </article>
-        <article>
-          <strong>2</strong>
-          <h3>áreas que se complementam</h3>
-          <p>Design e tecnologia em um mesmo olhar.</p>
-        </article>
+
+        <h2>Em números</h2>
+
+        <p>
+          Experiência, projetos e pessoas que fizeram parte da minha trajetória.
+        </p>
+
+        <div class="big-numbers">
+
+          <div class="numero">
+            <strong>+5</strong>
+            <span>anos de mercado</span>
+          </div>
+
+          <div class="numero">
+            <strong>+15</strong>
+            <span>clientes atendidos</span>
+          </div>
+
+          <div class="numero">
+            <strong>+20</strong>
+            <span>projetos desenvolvidos</span>
+          </div>
+
+          <div class="numero">
+            <strong>2</strong>
+            <span>áreas que se complementam</span>
+          </div>
+
+        </div>
+
+
+        <!-- CONTATO / RODAPÉ -->
+
+        <footer id="contato">
+
+          <a
+            href="mailto:contato@laraeifert.com"
+            class="botao-contato">
+            contato
+          </a>
+
+          <p>© 2026 Lara Eifert</p>
+
+        </footer>
+
       </section>
+
     </main>
 
-    <footer id="contato">
-      <a href="mailto:contato@laraeifert.com" class="botao-contato">contato</a>
-      <p>© 2026 Lara Eifert</p>
-    </footer>
-
-    <script src="script.js" defer></script>
   </body>
 </html>

@@ -22,6 +22,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 img,
@@ -29,8 +30,7 @@ svg {
   display: block;
 }
 
-button,
-a {
+button {
   cursor: pointer;
 }
 
@@ -58,6 +58,7 @@ a {
   --container: 1200px;
 }
 
+
 /* =========================================================
    HEADER
 ========================================================= */
@@ -71,46 +72,67 @@ header {
   z-index: 10;
 
   padding: 24px 5%;
-  background: var(--preto-puro)
+
+  background: var(--preto-puro);
 }
 
 nav {
   width: 100%;
-  max-width: var(--container);
+  max-width: none;
+
   margin: 0 auto;
+
   display: flex;
   align-items: center;
 }
 
 
-
-nav div {
-  display: flex;
-  gap: 30px;
-  margin-left: auto;
-}
-
-section {
-  min-height: 100vh;
-  scroll-margin-top: 90px;
-}
-
-/* Primeiro link = LOGO */
+/* Logo */
 
 nav > a:first-child {
   display: flex;
   align-items: center;
+
+  /*
+    O logo é puxado para a esquerda para acompanhar
+    o alinhamento visual utilizado no conteúdo principal.
+  */
+  transform: translateX(-3vw);
 }
 
-/* Links Lara / Contato / Portfólio */
+
+/* Links Lara / Portfólio / Contato */
+
+nav div {
+  display: flex;
+  gap: 33px;
+
+  margin-left: auto;
+}
 
 nav div a {
-  font-size: 14px;
+  min-width: 100px;
+
+  padding: 2px 0;
+
+  font-size: 15.5px;
   font-weight: 700;
+
+  text-align: center;
 }
 
 nav div a:hover {
   opacity: 0.7;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section {
+  min-height: 100vh;
+  scroll-margin-top: 90px;
 }
 
 
@@ -135,12 +157,11 @@ nav div a:hover {
 
   color: var(--branco);
 
-    background-image: url("imagens/background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    background-blend-mode: multiply;
-
+  background-image: url("imagens/background.jpg");
+  background-size: 130vw;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
 }
 
 
@@ -150,26 +171,27 @@ nav div a:hover {
   position: relative;
   z-index: 2;
 
-  max-width: 30vw;
+  max-width: 35vw;
 
-  font-size: clamp(52px, 9vw, 90px);
-  line-height: 0.98;
+  font-size: clamp(52px, 8vw, 80px);
+  line-height: 1;
   font-weight: 800;
   letter-spacing: -3px;
 }
 
-/* Textos do lado direito */
+
+/* Textos */
 
 #inicio p {
   position: relative;
   z-index: 2;
 
-  max-width: 30vw;
-
   color: var(--branco);
 }
 
 #inicio p:first-of-type {
+  max-width: 30vw;
+
   font-size: clamp(28px, 2.8vw, 36px);
   font-weight: 800;
   line-height: 1.05;
@@ -178,9 +200,13 @@ nav div a:hover {
 }
 
 #inicio p:last-of-type {
+  max-width: none;
+
   font-size: clamp(18px, 2.2vw, 25px);
   font-weight: 700;
   line-height: 2;
+
+  white-space: nowrap;
 }
 
 
@@ -190,15 +216,18 @@ nav div a:hover {
 
 #sobre {
   min-height: auto;
-  padding: 20px 8% 80px;
+
+  padding: 20px 8% 150px;
+
   background: var(--preto);
-  padding-bottom: 150px;
 }
 
-/* LOGOS */
+
+/* Logos */
 
 .logos-clientes {
   width: 120%;
+
   margin-left: -10%;
   margin-bottom: 60px;
 }
@@ -206,114 +235,139 @@ nav div a:hover {
 .logos-clientes img {
   width: 100%;
   height: auto;
+
   display: block;
 }
 
-/* FOTO + TEXTO */
+
+/* Foto + texto */
 
 .conteudo-sobre {
   max-width: 1100px;
+
   margin: 0 auto;
 
   display: grid;
   grid-template-columns: 420px 1fr;
+
   gap: 70px;
+
   align-items: center;
 }
 
 .conteudo-sobre > img {
   width: 180%;
-  height: 320px;
+  height: 380px;
+
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 25%;
+
   border-radius: 14px;
+
   transform: translateX(-230px);
 }
+
+
+/* Texto */
 
 .texto-sobre p:first-child {
   font-size: 22px;
   font-weight: 700;
+
   margin-bottom: 8px;
-    transform: translateX(150px);
+
+  transform: translateX(150px);
 }
 
 .texto-sobre h2 {
   font-size: clamp(52px, 9vw, 90px);
   line-height: 1;
+
   margin-bottom: 25px;
-    transform: translateX(150px);
+
+  transform: translateX(150px);
 }
 
 .texto-sobre p:nth-of-type(2) {
   max-width: 520px;
+
   font-size: 16px;
   line-height: 1.55;
+
   margin-bottom: 25px;
-    transform: translateX(150px);
+
+  transform: translateX(150px);
 }
 
 .texto-sobre a {
   display: inline-block;
+
   width: 160px;
+
   padding: 10px 20px;
-transform: translateX(150px);
 
   background: var(--branco);
   color: var(--preto);
 
   border-radius: 7px;
+
   text-align: center;
-  
+
+  transform: translateX(150px);
 }
+
 
 /* =========================================================
    PROJETOS / PORTFÓLIO
 ========================================================= */
 
 #projetos {
-  max-width: 1100px;
-  margin: 60px auto 0;
+  min-height: auto;
 
-  padding: 0 40px 40px;
+  padding: 0 8% 80px;
+
+  background: var(--preto);
 }
 
-/* Título da seção */
 
-#projetos > h2 {
-  font-size: 16px;
-
-  margin-bottom: 20px;
-}
-
-/* Barra de categorias (abas) */
+/* Botões das categorias */
 
 .portfolio-tabs {
   display: flex;
-  gap: 4px;
+
+  gap: 15px;
+
+  margin-bottom: 0;
 }
 
 .tab-categoria {
-  padding: 10px 18px;
+  padding: 15px 25px;
 
   border: none;
-  border-radius: 7px 7px 0 0;
+  border-radius: 8px 8px 0 0;
 
-  background: var(--cinza);
-  color: var(--preto);
+  background: var(--preto);
+  color: var(--branco);
 
-  font-family: inherit;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 700;
-  text-transform: uppercase;
 
   cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.tab-categoria:hover {
+  transform: translateY(-3px);
 }
 
 .tab-categoria.ativo {
-  background: #b9f75d;
+  background: var(--verde-claro);
+  color: var(--preto-puro);
 }
 
-/* Painel preto com os cards da categoria ativa */
+
+/* Área dos projetos */
 
 .portfolio-painel {
   background: var(--preto-puro);
@@ -323,47 +377,52 @@ transform: translateX(150px);
   padding: 25px;
 }
 
-/* Cada categoria fica oculta até virar a ativa */
+
+/* Cada categoria fica oculta até ficar ativa */
 
 .projeto-categoria {
   display: none;
+
+  background-color: #000;
+  padding: 50px;
+
+  border-radius: 10px;
 }
 
 .projeto-categoria.ativo {
   display: block;
 }
 
-/* Lista de projetos da categoria ativa, lado a lado */
 
-.projeto-categoria ul {
-  list-style: none;
+/* Grid dos cards */
 
+.projetos-grid {
   display: flex;
+
+  gap: 30px;
+
   flex-wrap: wrap;
-  gap: 15px;
 }
+
 
 /* Cards de projeto */
 
-.projeto-categoria li {
-  flex: 1 1 200px;
+.card-projeto {
+  position: relative;
+
+  flex: 1 1 calc(50% - 15px);
 
   min-height: 320px;
 
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
 
-  padding: 20px;
+  padding: 30px;
 
   border-radius: 10px;
 
   color: var(--branco);
-
-  font-size: 18px;
-  font-weight: 800;
-
-  text-align: center;
 
   overflow: hidden;
 
@@ -384,81 +443,119 @@ transform: translateX(150px);
     );
 }
 
-/* Texto do card */
 
-.projeto-categoria li a {
-  text-shadow:
-    2px 2px 0 var(--preto),
-    -1px -1px 0 var(--preto);
+/* Imagem do projeto */
 
-  transition: transform 0.2s ease;
+.card-projeto img {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 50%;
 }
 
-.projeto-categoria li a:hover {
-  transform: scale(1.05);
-}
 
-/* Front e Back End (ainda sem projetos) */
+/* Front e Back End */
 
-.projeto-categoria p {
+.projeto-categoria > p {
   min-height: 320px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  color: #aaa;
+  color: var(--cinza);
 
   font-size: 14px;
+
   text-align: center;
 }
 
 
 /* =========================================================
-   NÚMEROS
+   SECTION 4 — NÚMEROS
 ========================================================= */
 
 #numeros {
-  max-width: 1100px;
+  min-height: auto;
 
-  margin: 100px auto 0;
+  max-width: none;
 
-  padding: 50px;
+  margin: 0;
 
+  padding: 20px 8% 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Título */
+
+#numeros h2 {
+  margin: 0 0 14px;
+
+  font-size: 50px;
+}
+
+
+/* Texto de introdução */
+
+#numeros > p {
+  margin: 0 0 40px;
+
+  font-size: 30px;
+  line-height: 1.5;
+
+  color: var(--branco);
+}
+
+
+/* Área dos números */
+
+.big-numbers {
   display: grid;
+
   grid-template-columns: repeat(4, 1fr);
 
   gap: 50px;
 }
 
-#numeros article {
+
+/* Cada número */
+
+.numero {
   display: flex;
   flex-direction: column;
 }
 
-#numeros strong {
+
+/* Número grande */
+
+.numero strong {
   display: block;
 
-  font-size: clamp(52px, 6vw, 82px);
+  font-size: clamp(52px, 6vw, 120px);
   line-height: 0.9;
 
   font-weight: 800;
 
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-#numeros h3 {
-  font-size: 14px;
 
-  margin-bottom: 12px;
-}
+/* Texto abaixo do número */
 
-#numeros p {
-  font-size: 12px;
+.numero span {
+  font-size: 30px;
+  line-height: 1.4;
 
-  line-height: 1.5;
-
-  color: #eeeeee;
+  color: var(--branco);
 }
 
 
@@ -467,11 +564,11 @@ transform: translateX(150px);
 ========================================================= */
 
 footer {
-  max-width: 1100px;
+  width: 100%;
 
-  margin: 70px auto 0;
+  margin: 60px 0 0;
 
-  padding: 50px;
+  padding: 0 0 30px;
 
   display: flex;
   align-items: center;
@@ -479,6 +576,7 @@ footer {
 
   gap: 30px;
 }
+
 
 .botao-contato {
   width: 55%;
@@ -516,16 +614,6 @@ footer p {
 
 
 /* =========================================================
-   REMOVER OS <br> DO HTML
-========================================================= */
-
-body > br,
-main > br {
-  display: none;
-}
-
-
-/* =========================================================
    TRANSIÇÕES
 ========================================================= */
 
@@ -545,6 +633,17 @@ article,
 
 @media (max-width: 900px) {
 
+  header {
+    padding: 24px 7%;
+  }
+
+  nav > a:first-child {
+    transform: translateX(-2vw);
+  }
+
+
+  /* HERO */
+
   #inicio {
     min-height: 650px;
 
@@ -563,21 +662,39 @@ article,
     max-width: 500px;
   }
 
+
+  /* SOBRE */
+
   #sobre {
+    padding: 40px 7% 100px;
+  }
+
+  .conteudo-sobre {
     grid-template-columns: 220px 1fr;
 
     column-gap: 40px;
-
-    padding: 40px;
   }
 
-  #sobre::before {
-    height: 240px;
+
+  /* PROJETOS */
+
+  #projetos {
+    padding-left: 7%;
+    padding-right: 7%;
   }
+
+
+  /* NÚMEROS */
 
   #numeros {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .big-numbers {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
 
@@ -595,12 +712,20 @@ article,
     gap: 12px;
   }
 
-  nav a:first-child {
+  nav > a:first-child {
     width: 90px;
     height: 35px;
+
+    transform: none;
   }
 
-  nav a:not(:first-child) {
+  nav div {
+    gap: 8px;
+  }
+
+  nav div a {
+    min-width: auto;
+
     font-size: 11px;
   }
 
@@ -617,26 +742,28 @@ article,
 
   #inicio h1 {
     font-size: 48px;
+
     letter-spacing: -2px;
   }
 
   #inicio p:first-of-type {
+    max-width: 100%;
+
     font-size: 24px;
+  }
+
+  #inicio p:last-of-type {
+    font-size: 14px;
+
+    white-space: nowrap;
   }
 
 
   /* LOGOS */
 
-  #logo_cliente {
-    padding: 30px 20px;
-  }
-
-  #logo_cliente > div {
-    padding: 20px;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 12px;
+  .logos-clientes {
+    width: 120%;
+    margin-left: -10%;
   }
 
 
@@ -647,51 +774,62 @@ article,
     flex-direction: column;
     align-items: flex-start;
 
-    padding: 40px 25px;
+    padding: 40px 25px 80px;
 
     gap: 20px;
   }
 
-  #sobre::before {
+  .conteudo-sobre {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+  }
+
+  .conteudo-sobre > img {
     width: 100%;
     height: 260px;
 
-    order: 0;
+    transform: none;
   }
 
-  #sobre > p:first-child {
-    order: 1;
+  .texto-sobre p:first-child,
+  .texto-sobre h2,
+  .texto-sobre p:nth-of-type(2),
+  .texto-sobre a {
+    transform: none;
   }
 
-  #sobre h2 {
-    order: 2;
-
+  .texto-sobre h2 {
     font-size: 48px;
-  }
-
-  #sobre > p:nth-of-type(2) {
-    order: 3;
-  }
-
-  #sobre a {
-    order: 4;
   }
 
 
   /* PROJETOS */
 
   #projetos {
-    padding: 0 25px 30px;
+    padding: 0 25px 60px;
 
-    margin-top: 30px;
+    margin-top: 0;
   }
 
   .portfolio-tabs {
     flex-wrap: wrap;
   }
 
-  .projeto-categoria li,
-  .projeto-categoria p {
+  .projeto-categoria {
+    padding: 25px;
+  }
+
+  .card-projeto {
+    flex: 1 1 100%;
+
+    min-height: 250px;
+  }
+
+  .projeto-categoria > p {
     min-height: 250px;
   }
 
@@ -699,19 +837,35 @@ article,
   /* NÚMEROS */
 
   #numeros {
+    padding: 40px 25px 0;
+
+    margin-top: 0;
+  }
+
+  #numeros h2 {
+    font-size: 42px;
+  }
+
+  #numeros > p {
+    font-size: 20px;
+
+    margin-bottom: 35px;
+  }
+
+  .big-numbers {
     grid-template-columns: 1fr 1fr;
 
     gap: 35px 20px;
-
-    padding: 40px 25px;
-
-    margin-top: 50px;
   }
 
-  #numeros strong {
+  .numero strong {
     font-size: 48px;
 
     margin-bottom: 20px;
+  }
+
+  .numero span {
+    font-size: 18px;
   }
 
 
@@ -722,13 +876,14 @@ article,
 
     align-items: stretch;
 
-    padding: 40px 25px;
+    margin-top: 50px;
 
-    margin-top: 30px;
+    padding: 0 0 25px;
   }
 
   .botao-contato,
   footer p {
     width: 100%;
   }
+
 }
