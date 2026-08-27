@@ -84,20 +84,20 @@ nav {
 
   display: flex;
   align-items: center;
+
 }
 
 
-/* Logo */
-
+/* Nome */
 nav > a:first-child {
   display: flex;
   align-items: center;
-
-  /*
-    O logo é puxado para a esquerda para acompanhar
-    o alinhamento visual utilizado no conteúdo principal.
-  */
-  transform: translateX(-3vw);
+  font-family: "WindSong", cursive;
+  font-size: 32px;
+  font-weight: 200;
+  text-decoration: none;
+  transform: none;
+  margin-left: 3vw;
 }
 
 
